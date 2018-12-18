@@ -2,7 +2,6 @@ package com.komyshenets.controller;
 
 import com.komyshenets.domain.*;
 import com.komyshenets.repository.ConfigRepository;
-import com.komyshenets.repository.TemplateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * API для управления шаблонами
+ * API для управления конфигами
  */
 @RestController
 public class ConfigController {
@@ -21,12 +20,15 @@ public class ConfigController {
         this.configRepository = configRepository;
     }
 
-    @RequestMapping
-    public Template getTemplate(Component component, Stage stage) {
+    public List<Config> findConfig(Tag... tags) {
         return null;
     }
 
-    public List<Template> findConfig(Tag... tags) {
+    /**
+     * Возвращает Ш
+     */
+    @RequestMapping
+    public Template getTemplate(Component component, Stage stage) {
         return null;
     }
 
